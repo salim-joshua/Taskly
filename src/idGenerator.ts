@@ -1,6 +1,6 @@
 const generatedIds = new Set<string>();
 
-function generateRandomId(): string {
+export function generateRandomId(): string {
 
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let uniqueId = '';
