@@ -3,12 +3,20 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
   }
+
+.header {
+    width: 100%;
+    top: 0;
+    text-align: center;
+}
 
 .list-frame {
     max-width: 400px;
