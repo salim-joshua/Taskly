@@ -20,5 +20,3 @@ export function generateRandomId(): string {
 
     return uniqueId;
 }
-
-console.log(generateRandomId());

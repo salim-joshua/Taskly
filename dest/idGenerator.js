@@ -19,4 +19,3 @@ function generateRandomId() {
     } while (generatedIds.has(uniqueId));
     return uniqueId;
 }
-console.log(generateRandomId());
