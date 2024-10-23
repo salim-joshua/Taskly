@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./dest/script.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Taskly</title>
   </head>
   <body>
-    <ul id="list"></ul>
-    <form id="new-task-form">
-        <input type="text" id="new-task-title">
-        <button type="submit">Add</button>
-    </form>
+    <div class="list-frame">
+      <ul id="list"></ul>
+      <form id="new-task-form">
+        <input type="text" id="new-task-title" />
+        <button type="submit">+</button>
+      </form>
+    </div>
   </body>
 </html>
