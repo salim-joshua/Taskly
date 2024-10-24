@@ -18,7 +18,16 @@ tasks.forEach(addListItem)
 function addListItem(task : Task) {
     const item = document.createElement("li")
     const label = document.createElement("label")
+    const delButton = document.createElement("button")
     const checkbox = document.createElement("input")
+
+    delButton.textContent = "x"
+    delButton.name = "delete-button"
+    delButton.classList.add("delete-button")
+
+    delButton.addEventListener("click", () => {
+        deleteTask(item, task.id);
+    })
     
     checkbox.addEventListener("change", () => {
         task.completed = checkbox.checked;
@@ -29,11 +38,22 @@ function addListItem(task : Task) {
     
     label.append(checkbox, task.title)
     item.append(label)
+    item.append(delButton)
     list?.append(item);
 }
 
 function saveTasks() {
     localStorage.setItem("TASKS", JSON.stringify(tasks));
+}
+
+function deleteTask(item : HTMLLIElement, taskId: string) {
+    const taskIndex = tasks.findIndex(task => task.id === taskId)
+    if (taskIndex === -1) return
+
+    tasks.splice(taskIndex, 1)
+    item.remove()
+
+    saveTasks();
 }
 
 function loadTasks() : Task[] {

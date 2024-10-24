@@ -19,7 +19,7 @@ html, body {
 }
 
 .list-frame {
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -30,7 +30,10 @@ ul {
 }
 
 li {
-    margin: 10px 0 10px 0
+    margin: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 input[type=checkbox] {
@@ -39,6 +42,8 @@ input[type=checkbox] {
 }
 
 input[type=text] {
+    max-width: 600px;
+    width: 500px;
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(32, 33, 38);
