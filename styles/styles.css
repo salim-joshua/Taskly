@@ -61,6 +61,18 @@ button {
     font-size: 25px;
 }
 
+.delete-button {
+    background-color: transparent;
+
+}
+
+.delete-button::after {
+    content: "\00d7";
+    display: inline-block;
+    color: rgb(255, 117, 117);
+    font-size: 30px;
+}
+
 .crossed-text {
     text-decoration: line-through;
     color: rgba(255, 255, 255, 0.566);

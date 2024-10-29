@@ -21,7 +21,6 @@ function addListItem(task: Task) {
     const delButton = document.createElement("button")
     const checkbox = document.createElement("input")
 
-    delButton.textContent = "x"
     delButton.name = "delete-button"
     delButton.classList.add("delete-button")
 
