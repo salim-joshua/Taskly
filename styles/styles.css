@@ -10,6 +10,7 @@ html, body {
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    padding: 0 10px;
   }
 
 .header {
@@ -33,7 +34,6 @@ li {
     margin: 10px 0 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 input[type=checkbox] {
@@ -43,7 +43,7 @@ input[type=checkbox] {
 
 input[type=text] {
     max-width: 600px;
-    width: 500px;
+    width: calc(100% - 82px);
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(32, 33, 38);
@@ -63,14 +63,15 @@ button {
 
 .delete-button {
     background-color: transparent;
-
+    margin-left: auto;
 }
 
-.delete-button::after {
+.delete-button::before {
     content: "\00d7";
     display: inline-block;
     color: rgb(255, 117, 117);
     font-size: 30px;
+    padding: 0 5px;
 }
 
 .crossed-text {

@@ -20,7 +20,10 @@ function addListItem(task: Task) {
     const label = document.createElement("label")
     const delButton = document.createElement("button")
     const checkbox = document.createElement("input")
-
+    
+    checkbox.id = task.id;
+    label.htmlFor = task.id;
+    
     delButton.name = "delete-button"
     delButton.classList.add("delete-button")
 
@@ -36,8 +39,8 @@ function addListItem(task: Task) {
     checkbox.type = "checkbox"
     checkbox.checked = task.completed
 
-    label.append(checkbox, task.title)
-    item.append(label)
+    label.append(task.title)
+    item.append(checkbox, label)
     item.append(delButton)
     list?.append(item);
 }
