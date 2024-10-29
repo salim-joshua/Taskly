@@ -17,6 +17,7 @@ function addListItem(task) {
     });
     checkbox.addEventListener("change", () => {
         task.completed = checkbox.checked;
+        toggleCrossedText(item);
         saveTasks();
     });
     checkbox.type = "checkbox";
@@ -42,6 +43,9 @@ function loadTasks() {
     if (taskJSON == null)
         return [];
     return JSON.parse(taskJSON);
+}
+function toggleCrossedText(item) {
+    item.classList.contains("crossed-text") ? item.classList.remove("crossed-text") : item.classList.add("crossed-text");
 }
 form === null || form === void 0 ? void 0 : form.addEventListener("submit", e => {
     e.preventDefault();
